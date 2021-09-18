@@ -63,7 +63,7 @@ export class ScannComponent implements OnInit {
 
   abrirCamara:boolean = false;
   constructor() {
-    
+  
   }
 
   ngOnInit(): void {
@@ -71,19 +71,8 @@ export class ScannComponent implements OnInit {
 
   buscarProducto(event:any){
     console.log(event);
-    this.value = event; 
+    this.value = 'evento'; 
   }
-
-  // onCodeResult(result:string){
-  //   this.scanResult = result;
-  // }
-
-  // onCodeError(event:any){
-  //   console.log('error',event);
-  // }
-  // onCodeFail(event:any){
-  //   console.log('fail',event);
-  // }
 
   toggleCamara(){
     this.abrirCamara = !this.abrirCamara;

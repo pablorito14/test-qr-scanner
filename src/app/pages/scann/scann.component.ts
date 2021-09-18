@@ -72,8 +72,9 @@ export class ScannComponent implements OnInit {
 
   buscarProducto(event:any){
     console.log(event);
-    // this.value = 'evento'; 
-    this.change='evento';
+    // // this.value = 'evento'; 
+    this.change= event;
+    // // this.value.list
   }
 
   toggleCamara(){

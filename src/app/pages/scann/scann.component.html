@@ -1,9 +1,20 @@
-<zxing-scanner (scanSuccess)="onCodeResult($event)"></zxing-scanner>
+<div class="card- round mt-2" *ngIf="abrirCamara">
+  <!-- <zxing-scanner class="round" 
+                (scanSuccess)="onCodeResult($event)" 
+                (scanError)="onCodeError($event)"
+                
+                [formats]="allowedFormats"></zxing-scanner>   -->
+                <ngx-barcode-scanner [(value)]="value" [codes]="['code_128', 'ean', 'upc', 'upc_e', 'ean_8']" [errorThreshold]="0.1" (exception)="onError($event)"></ngx-barcode-scanner>
+</div>
+<div class="text-center my-2">
+  <button class="btn btn-primary" (click)="toggleCamara()">Mostrar/ocultar camara</button>
+</div>
+
 
 <div class="card">
   <div class="card-body text-center">
     <p>Contenido QR</p>
     <hr>
-    <small>{{ scanResult }}</small>
+    <small>{{ value }}</small>
   </div>
 </div>

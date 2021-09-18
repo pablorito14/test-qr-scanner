@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { ScannComponent } from './pages/scann/scann.component';
 import { NavbarComponent } from './shared/navbar/navbar.component';
 import { ZXingScannerModule } from '@zxing/ngx-scanner';
+import { NgxBarcodeScannerModule } from '@eisberg-labs/ngx-barcode-scanner';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { ZXingScannerModule } from '@zxing/ngx-scanner';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ZXingScannerModule
+    ZXingScannerModule,
+    NgxBarcodeScannerModule
   ],
   providers: [],
   bootstrap: [AppComponent]

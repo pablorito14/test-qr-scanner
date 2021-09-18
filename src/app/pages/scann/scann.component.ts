@@ -73,7 +73,7 @@ export class ScannComponent implements OnInit {
   buscarProducto(event:any){
     console.log(event);
     // // this.value = 'evento'; 
-    this.change= event;
+    this.change= this.value;
     // // this.value.list
   }
 

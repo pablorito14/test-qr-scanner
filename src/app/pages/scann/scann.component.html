@@ -1,10 +1,20 @@
+<div class="card mt-2">
+  <div class="card-body text-center">
+    <b>Código</b>: <small>{{ value }}</small>
+    <br>
+    <b>Descripcion</b>: <small>{{ desc }}</small>
+    <br>
+    <b>Categoria</b>: <small>{{ cat }}</small>
+  </div>
+</div>
+
 <div class="card round mt-2" *ngIf="abrirCamara">
   <div class="card-body">
     <ngx-barcode-scanner 
         [(value)]="value" 
         [codes]="['code_128', 'ean', 'upc', 'upc_e', 'ean_8']" 
         [errorThreshold]="0.1" 
-        (valueChange)="buscarProducto($event)"
+        (valueChange)="buscarProducto()"
         (exception)="onError($event)"></ngx-barcode-scanner>
   </div>
   
@@ -14,12 +24,8 @@
 </div>
 
 
-<div class="card">
-  <div class="card-body text-center">
-    <p>Contenido QR</p>
-    <hr>
-    VALUE: <small>{{ value }}</small>
-    <br>
-    CHANGE: <small>{{ change }}</small>
-  </div>
+
+
+<div>
+  <button class="btn btn-danger" (click)="buscar()">buscar</button>
 </div>

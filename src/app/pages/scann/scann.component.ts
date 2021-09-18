@@ -69,12 +69,28 @@ export class ScannComponent implements OnInit {
   ngOnInit(): void {
   }
   change:string='';
+  desc:string = '';
+  cat:string = '';
 
-  buscarProducto(event:any){
-    console.log(event);
-    // // this.value = 'evento'; 
-    this.change= this.value;
-    // // this.value.list
+  buscarProducto(){
+    let codigo = parseInt(this.value);
+    let producto = this.productos.find(element => element.codigo == codigo);
+    if(producto) {
+      this.desc = producto.descripcion;
+      this.cat = producto.categoria;
+    }
+  }
+
+  buscar(){
+    let codigo = parseInt(this.value);
+    codigo = 9789877972986;
+    let producto = this.productos.find(element => element.codigo == codigo);
+    if(producto) {
+      this.desc = producto.descripcion;
+      this.cat = producto.categoria;
+    }
+      // this.change = producto.descripcion;
+    console.log(producto);
   }
 
   toggleCamara(){

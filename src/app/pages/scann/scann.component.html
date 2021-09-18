@@ -4,7 +4,6 @@
         [(value)]="value" 
         [codes]="['code_128', 'ean', 'upc', 'upc_e', 'ean_8']" 
         [errorThreshold]="0.1" 
-        [ngClass]="['testing']"
         (valueChange)="buscarProducto($event)"
         (exception)="onError($event)"></ngx-barcode-scanner>
   </div>
@@ -20,5 +19,6 @@
     <p>Contenido QR</p>
     <hr>
     <small>{{ value }}</small>
+    <small>{{ change }}</small>
   </div>
 </div>

@@ -68,10 +68,12 @@ export class ScannComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  change:string='';
 
   buscarProducto(event:any){
     console.log(event);
-    this.value = 'evento'; 
+    // this.value = 'evento'; 
+    this.change='evento';
   }
 
   toggleCamara(){

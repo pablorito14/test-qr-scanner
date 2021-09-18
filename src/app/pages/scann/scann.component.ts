@@ -30,7 +30,7 @@ export class ScannComponent implements OnInit {
   // }
   productos:Producto[] = [
     {
-      codigo:779017904606, 
+      codigo:7790170904606, 
       descripcion: 'Cafe La Morenita 170grs',
       categoria: 'Alimentos'
     },
